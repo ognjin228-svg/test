@@ -1,0 +1,22 @@
+{
+  "name": "world-sandbox",
+  "version": "1.0.0",
+  "description": "Песочница миров — симулятор бога",
+  "main": "main.js",
+  "author": "nikita",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "com.nikita.worldsandbox",
+    "productName": "WorldSandbox",
+    "files": ["main.js", "game/**"],
+    "win": { "target": "portable" },
+    "portable": { "artifactName": "WorldSandbox.exe" }
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
